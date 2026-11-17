@@ -37,6 +37,7 @@ export const login = async (req, res) => {
     }
     catch(error){
         console.error('Error during login:', error);
+        return res.status(500).json({message: "Login failed"});
     }
 }
 export const logOut = async (req, res) => {
@@ -48,5 +49,6 @@ export const logOut = async (req, res) => {
     }
     catch(error){
         console.error('Error during logout:', error);
+        return res.status(500).json({message: "Logout failed"});
     }
 } 

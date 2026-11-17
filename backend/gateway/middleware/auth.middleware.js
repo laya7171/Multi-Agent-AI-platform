@@ -1,8 +1,8 @@
-import redis from "ioredis"
+import redis from "../../shared/redis/redis.js"
 
 const protect = async(req, res, next) => {
     try{
-        const sessionId = req.cookies?.sessionId
+        const sessionId = req.cookies?.session
         if(!sessionId){
             return res.status(400).json({message: "Unauthorized"})
         }
