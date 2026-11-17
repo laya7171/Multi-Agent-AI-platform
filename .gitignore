@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+backend/services/auth/serviceAccountKey.json
+node_modules/
+dist/
